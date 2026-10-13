@@ -1,5 +1,40 @@
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; overflow-x: hidden; font-family: Inter, system-ui, sans-serif; }
-.kds-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
-@media (max-width: 900px) { .kds-grid { grid-template-columns: 1fr; } }
-@media (max-width: 480px) { h1 { font-size: 24px; } }
+html, body { margin: 0; padding: 0; overflow-x: hidden; font-family: "Plus Jakarta Sans", Inter, "Segoe UI", system-ui, sans-serif; background: #0B0D14; }
+button { font-family: inherit; cursor: pointer; }
+.kds { background: #0B0D14; color: #F2F4FA; min-height: 100dvh; padding: 20px 22px; }
+.kds-top { display: flex; align-items: center; gap: 14px; }
+.kds-logo { width: 54px; height: 54px; border-radius: 15px; box-shadow: 0 0 26px rgba(255,140,0,.35); }
+.kds-top h1 { margin: 0; font-size: 30px; font-weight: 800; }
+.kds-top h1 span { color: #8A7DFF; }
+.kds-sub { color: #9AA1B8; font-size: 13px; font-family: Consolas, monospace; }
+.netpill { margin-left: auto; font-weight: 800; font-size: 13px; border-radius: 999px; padding: 8px 16px; }
+.netpill.on { background: #19C39A22; color: #2EE6B6; border: 1px solid #2EE6B6; }
+.netpill.off { background: #FFB02022; color: #FFC44D; border: 1px solid #FFC44D; }
+.offlinebar { background: #FFB020; color: #000; padding: 10px 14px; border-radius: 12px; margin-top: 12px; font-weight: 700; }
+.stationrow { display: flex; gap: 8px; overflow-x: auto; padding: 14px 0 4px; scrollbar-width: none; }
+.st { border-radius: 999px; padding: 10px 20px; background: #1B2030; color: #fff; border: 2px solid transparent; font-weight: 700; min-height: 48px; white-space: nowrap; }
+.st.on { background: #141824; border-color: #8A7DFF; box-shadow: 0 0 0 3px rgba(138,125,255,.2); }
+.kds-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 12px; }
+.kcol { background: #141824; border-radius: 22px; padding: 14px; min-height: 420px; }
+.kcolhead { display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid; padding-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
+.count { background: #1B2030; border-radius: 99px; padding: 3px 13px; font-family: monospace; }
+.kempty { color: #9AA1B8; text-align: center; padding: 34px 0; }
+.ticket { background: #1B2030; border-radius: 18px; padding: 16px; margin-top: 12px; border: 1px solid #262C3F; border-left: 7px solid #8A7DFF; }
+.ticket.warm { border-left-color: #FFB020; }
+.ticket.hot { border-left-color: #F04438; animation: pulse 1.6s infinite; }
+@keyframes pulse { 50% { box-shadow: 0 0 0 5px rgba(240,68,56,.22); } }
+.trow { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.tno { font-family: Consolas, monospace; font-size: 20px; color: #8A7DFF; }
+.ttable { background: #262C3F; border-radius: 10px; padding: 5px 13px; font-weight: 800; font-size: 18px; }
+.timer { margin-left: auto; font-family: monospace; font-weight: 800; font-size: 18px; border-radius: 10px; padding: 4px 12px; }
+.timer.ok { background: #19C39A22; color: #2EE6B6; } .timer.warm { background: #FFB02022; color: #FFC44D; } .timer.hot { background: #F0443822; color: #FF6B60; }
+.titem { font-size: 23px; font-weight: 800; padding: 5px 0; }
+.titem b { color: #FFC44D; }
+.tnote { display: block; color: #FFC44D; font-size: 15px; font-weight: 600; }
+.tbtns { display: flex; gap: 8px; margin-top: 12px; }
+.go { flex: 1; min-height: 54px; border-radius: 14px; border: 0; background: linear-gradient(135deg,#2EE6B6,#3BC9DB); font-weight: 800; font-size: 17px; color: #06281F; }
+.prt { min-height: 54px; border-radius: 14px; background: #262C3F; color: #fff; border: 0; padding: 0 18px; font-weight: 700; }
+.wait { flex: 1; display: flex; align-items: center; justify-content: center; color: #2EE6B6; font-weight: 800; }
+.kds-foot { color: #9AA1B8; font-size: 12px; margin-top: 16px; text-align: center; font-family: monospace; }
+@media (max-width: 900px) { .kds-grid { grid-template-columns: 1fr; } .kcol { min-height: auto; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
