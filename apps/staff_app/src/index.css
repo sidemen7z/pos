@@ -1,0 +1,8 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; overflow-x: hidden; font-family: Inter, system-ui, sans-serif; }
+img { max-width: 100%; }
+button { min-height: 44px; }
+@media (max-width: 480px) {
+  h2 { font-size: 20px; }
+}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }

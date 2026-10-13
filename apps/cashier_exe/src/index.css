@@ -1,0 +1,5 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; overflow-x: hidden; font-family: Inter, system-ui, sans-serif; }
+.pos-grid { display: grid; grid-template-columns: 280px 1fr 320px; height: 100dvh; }
+@media (max-width: 1000px) { .pos-grid { grid-template-columns: 220px 1fr 260px; } }
+@media (max-width: 760px) { .pos-grid { grid-template-columns: 1fr; height: auto; } .pos-grid > aside, .pos-grid > main { min-height: 40dvh; } }

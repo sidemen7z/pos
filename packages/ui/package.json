@@ -1,0 +1,8 @@
+{
+  "name": "@aiseserve/ui",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./src/index.tsx",
+  "peerDependencies": { "react": "^18.3.1" },
+  "devDependencies": { "typescript": "^5.6.3" }
+}
